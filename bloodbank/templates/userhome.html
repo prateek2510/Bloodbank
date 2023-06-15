@@ -1,0 +1,28 @@
+{% include 'blocks/userheader.html' %}
+<section class="section contact-me" data-section="section4">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Hello {{name}} !</h2>
+        <div class="line-dec"></div>
+
+        <table class='table'>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Blood Group</th>
+            </tr>
+
+            {% for user in users %}
+              <tr>
+                <td>{{user.0}}</td>
+                <td>{{user.1}}</td>
+                <td>{{user.2}}</td>
+              </tr>
+            {% endfor %}
+        </table>
+
+       </div>
+    </div>
+</section> 
+
+{% include 'blocks/footer.html' %}
